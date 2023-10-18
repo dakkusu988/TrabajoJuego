@@ -1,1 +1,1 @@
-# TrabajoRedesSociales/PlataformaJuegos
+GUÍA APLICACIÓN - PROYECTO PYTHON LOGROS
