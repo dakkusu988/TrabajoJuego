@@ -5,6 +5,7 @@
             "nombre": "El gran sacrificio",
             "descripción": "Obtén 4 sacrificios en una partida pública.",
             "progreso": 4,
+            "meta": 4,
             "desbloqueado": true,
             "fechaDesbloqueo": "Se desbloqueó el 19 JUN 2022 a las 2:07"
         },
@@ -13,6 +14,7 @@
             "nombre": "Un bocado para el Ente",
             "descripción": "Sacrifica un total de 100 supervivientes en partidas públicas.",
             "progreso": 100,
+            "meta": 100,
             "desbloqueado": true,
             "fechaDesbloqueo": "Se desbloqueó el 14 JUL 2022 a las 17:28"
         },
@@ -21,6 +23,7 @@
             "nombre": "Escapista",
             "descripción": "Suéltate del gancho y escapa en una partida pública.",
             "progreso": 1,
+            "meta": 1,
             "desbloqueado": true,
             "fechaDesbloqueo": "Se desbloqueó el 25 OCT 2022 a las 21:03"
         },
@@ -29,6 +32,7 @@
             "nombre": "El hombre oculto",
             "descripción": "Con la Forma, acecha hasta alcanzar 300 aumentos del nivel de poder en partidas públicas.",
             "progreso": 127,
+            "meta": 300,
             "desbloqueado": false,
             "fechaDesbloqueo": null
         },
@@ -37,6 +41,7 @@
             "nombre": "Purificación profunda",
             "descripción": "Purifica 100 tótems de maleficio en una partida pública.",
             "progreso": 72,
+            "meta": 100,
             "desbloqueado": false,
             "fechaDesbloqueo": null
         },
@@ -45,6 +50,7 @@
             "nombre": "Todo por el equipo",
             "descripción": "Recibe un golpe cerca de un superviviente descolgado hace poco para protegerlo 250 veces.",
             "progreso": 215,
+            "meta": 250,
             "desbloqueado": false,
             "fechaDesbloqueo": null
         }
