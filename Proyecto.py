@@ -54,9 +54,7 @@ def mostrar_todos():
 
 # Función para filtrar logros no desbloqueados por progreso (de mayor a menor)
 def filtrar_por_progreso():
-    """
-    Filtra y muestra los logros no desbloqueados por progreso, ordenados de mayor a menor.
-    """
+    
     print("Logros no desbloqueados con progreso de mayor a menor:")
     logros_no_desbloqueados = [logro for logro in logros if not logro['desbloqueado']]
     logros_no_desbloqueados.sort(key=lambda x: x['progreso'], reverse=True)
