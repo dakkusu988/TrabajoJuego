@@ -1,4 +1,11 @@
-import json
+import requests
+
+#Coger el JSON de una URL de internet
+file = requests.get('https://raw.githubusercontent.com/dakkusu988/TrabajoJuego/main/Logros.json')
+datos = file.json()
+
+# Obtener la lista de logros
+logros = datos["logros"]
 
 # Función para buscar logros por nombre
 def buscar_por_nombre():
@@ -42,16 +49,8 @@ def mostrar_logro(logro, mostrar_fecha=True):
     if mostrar_fecha and logro['desbloqueado'] and logro['fechaDesbloqueo']:
         print(f"Fecha de desbloqueo: {logro['fechaDesbloqueo']}")
 
-# Abrir el archivo JSON "Logros.json" en modo lectura
-with open('Logros.json', 'r') as archivo_json:
-    # Cargar los datos desde el archivo JSON
-    datos = json.load(archivo_json)
-
-# Obtener la lista de logros
-logros = datos["logros"]
-
 while True:
-    # Agregar una línea de separación
+    # Agrega una línea de separación
     print("=========================================")
 
     # Solicitar información al usuario
@@ -60,10 +59,10 @@ while True:
     print("2. Mostrar todos los logros")
     print("3. Filtrar logros no desbloqueados por progreso (de mayor a menor)")
     print("4. Salir")
-    print()  # Agregar un espacio en blanco
+    print()  # Agrega un espacio en blanco
 
     opcion = input("Ingrese el número de la opción deseada: ")
-    print()  # Agregar un espacio en blanco
+    print()  # Agrega un espacio en blanco
 
     # Diccionario de funciones para simular un switch
     opciones = {
@@ -75,8 +74,8 @@ while True:
 
     # Obtener la función correspondiente a la opción ingresada
     funcion = opciones.get(opcion, lambda: print("Opción no válida. Por favor, ingrese un número válido de 1 a 4."))
-    print()  # Agregar un espacio en blanco
+    print()  # Agrega un espacio en blanco
 
     # Ejecutar la función
     funcion()
-    print()  # Agregar un espacio en blanco
+    print()  # Agrega un espacio en blanco
