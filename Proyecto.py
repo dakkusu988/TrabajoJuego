@@ -1,14 +1,17 @@
 import requests
 
-#Coger el JSON de una URL de internet
+# Cargar el JSON desde una URL de internet
 file = requests.get('https://raw.githubusercontent.com/dakkusu988/TrabajoJuego/main/Logros.json')
 datos = file.json()
 
 # Obtener la lista de logros
 logros = datos["logros"]
 
-# Función para mostrar un logro con todos sus detalles
+# Función para mostrar un logro con todos sus detalles, incluyendo nombre, descripción, progreso y estado de desbloqueo.
+# logro: Diccionario que representa un logro.
+# mostrar_fecha: Booleano para indicar si se debe mostrar la fecha de desbloqueo (por defecto: True).
 def mostrar_logro(logro, mostrar_fecha=True):
+
     print()
     print(f"Logro: {logro['nombre']}")
     print(f"Descripción: {logro['descripción']}")
@@ -18,8 +21,9 @@ def mostrar_logro(logro, mostrar_fecha=True):
     if mostrar_fecha and logro['desbloqueado'] and logro['fechaDesbloqueo']:
         print(f"Fecha de desbloqueo: {logro['fechaDesbloqueo']}")
 
-# Función para buscar logros por nombre
+# Función para buscar logros por nombre o parte del nombre y muestra los resultados.
 def buscar_por_nombre():
+    
     busqueda = input("Ingrese el nombre o parte del nombre del logro: ")
     print(f"Logros que contienen '{busqueda}':")
     
@@ -27,8 +31,9 @@ def buscar_por_nombre():
         if busqueda.lower() in logro['nombre'].lower():
             mostrar_logro(logro)
 
-# Función para mostrar todos los logros
+# Función para mostrar todos los logros, separados en logros desbloqueados y logros bloqueados.
 def mostrar_todos():
+    
     print("Todos los logros:")
     print()
 
@@ -49,6 +54,9 @@ def mostrar_todos():
 
 # Función para filtrar logros no desbloqueados por progreso (de mayor a menor)
 def filtrar_por_progreso():
+    """
+    Filtra y muestra los logros no desbloqueados por progreso, ordenados de mayor a menor.
+    """
     print("Logros no desbloqueados con progreso de mayor a menor:")
     logros_no_desbloqueados = [logro for logro in logros if not logro['desbloqueado']]
     logros_no_desbloqueados.sort(key=lambda x: x['progreso'], reverse=True)
